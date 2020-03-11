@@ -1,0 +1,19 @@
+<template>
+  <div>
+    <el-button type="info" @click="logout">推出</el-button>
+  </div>
+</template>
+<script>
+export default {
+  methods: {
+    logout () {
+      // 清空token
+      window.sessionStorage.clear()
+      // 跳转到登录页
+      this.$router.push('/login')
+    }
+  }
+}
+</script>
+<style lang="less" scope>
+</style>

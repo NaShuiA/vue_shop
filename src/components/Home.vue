@@ -100,7 +100,6 @@ export default {
     },
     // 保存链接激活状态
     saveNavState (activePath) {
-      console.log(1)
       window.sessionStorage.setItem('activePath', activePath)
       this.activePath = activePath
     }

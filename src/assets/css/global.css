@@ -8,7 +8,7 @@ body,
 }
 .el-breadcrumb {
   margin-bottom: 15px;
-  font-size: 12px;
+  font-size: 14px;
 }
 .el-card {
   margin-top: 10px;
@@ -20,4 +20,7 @@ body,
 }
 .el-pagination {
   margin-top: 15px;
+}
+.el-cascader-menu {
+  height: 300px;
 }

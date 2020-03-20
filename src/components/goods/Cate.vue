@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-16 10:14:16
- * @LastEditTime: 2020-03-16 10:15:45
- * @LastEditors: your name
+ * @LastEditTime: 2020-03-20 21:30:01
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue_shop\src\components\goods\List.vue
  -->
@@ -326,7 +326,7 @@ export default {
   }
 }
 </script>
-<style lang="less">
+<style lang="less" scoped>
 .treeTable{
   margin-top: 15px;
 }

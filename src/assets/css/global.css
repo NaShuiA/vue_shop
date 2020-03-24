@@ -30,3 +30,6 @@ body,
 .el-alert {
   width: 350px;
 }
+.ql-editor {
+  min-height: 300px;
+}

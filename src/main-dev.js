@@ -14,6 +14,11 @@ import 'quill/dist/quill.bubble.css' // for bubble theme
 // axios
 import axios from 'axios'
 import TreeTable from 'vue-table-with-tree-grid'
+
+// 导入nprogress
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
+
 Vue.component('tree-table', TreeTable)
 // 富文本注册全局可用
 Vue.use(VueQuillEditor /* { default global options } */)
@@ -31,9 +36,16 @@ Vue.filter('dateFormat', function (originVal) {
 })
 // 配置请求根路径
 axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
+// 在request拦截器中显示进度条 NProgress.start()
 axios.interceptors.request.use(config => {
+  NProgress.start()
   // 为请求头对象,添加token验证的Authorization字段
   config.headers.Authorization = window.sessionStorage.getItem('token')
+  return config
+})
+// 在response拦截器中隐藏进度条 NProgress.done()
+axios.interceptors.response.use(config => {
+  NProgress.done()
   return config
 })
 Vue.prototype.$http = axios

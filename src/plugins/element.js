@@ -37,8 +37,12 @@ import {
   Steps,
   Upload,
   Checkbox,
-  CheckboxGroup
+  CheckboxGroup,
+  Timeline,
+  TimelineItem
 } from 'element-ui'
+Vue.use(TimelineItem)
+Vue.use(Timeline)
 Vue.use(Checkbox)
 Vue.use(CheckboxGroup)
 Vue.use(Upload)
